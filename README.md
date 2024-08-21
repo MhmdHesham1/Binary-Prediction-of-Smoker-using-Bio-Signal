@@ -1,7 +1,7 @@
 Binary Prediction of Smoker Status Using Bio-Signals
 Project Overview
 
-This project aims to predict the smoker status (binary classification) of individuals based on various bio-signals. The model is trained using the XGBClassifier from the xgboost library and evaluated using common classification metrics.
+This project aims to predict the smoker status (binary classification) of individuals based on various bio-signals. The model is trained using the CatBoostClassifier from the catboost library and evaluated using common classification metrics.
 Data Preparation
 
     Data Source: The dataset used in this project includes various bio-signals as features and a binary target indicating smoker status.
@@ -9,12 +9,13 @@ Data Preparation
 
 Model Development
 
-    Model Used: XGBClassifier from the xgboost library.
+    Model Used: CatBoostClassifier from the catboost library.
     Hyperparameters: The model is configured with the following key hyperparameters:
-        n_estimators=100
-        max_depth=2
+        iterations=100
+        depth=2
         learning_rate=0.1
-        random_state=33
+        random_seed=33
+        logging_level='Silent'
 
 Evaluation
 
